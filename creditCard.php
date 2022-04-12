@@ -5,12 +5,6 @@ class creditCard{
   private $scadenza;
   private $cvv;
 
-  function __construct($_numero, $_scadenza, $_cvv){
-    $this->numero = $_numero;
-    $this->scadenza = $_scadenza;
-    $this->cvv = $_cvv;
-  }
-
   public function getNumero(){
     return $this->numero;
   }
@@ -21,5 +15,11 @@ class creditCard{
 
   public function getcvv(){
     return $this->cvv;
+  }
+
+  public function addCrediCard($numero, $scadenza, $cvv){
+    $this->numero = $numero;
+    $this->scadenza =$scadenza;
+    $this->cvv = $cvv;
   }
 }

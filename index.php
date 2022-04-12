@@ -33,7 +33,7 @@ $prodotto4 = new prodotto(
   'DormiQui',
   59.99
 );
-
+var_dump($prodotto1, $prodotto2, $prodotto3, $prodotto4);
 // USER
 
 $user1 = new user(
@@ -43,10 +43,9 @@ $user1 = new user(
   'mariorossi',
   'Piazza la Bomba e Scappa',
   '12345678901',
-  '2938492923845820',
-  '12/25',
-  933
 );
+$user1->getSconto();
+$user1->addCrediCard(123812831283, '10/29', 333);
 
 var_dump($user1);
 
@@ -56,10 +55,8 @@ $ospite1 = new ospite(
   'giova.white@gmail.com',
   'Via da Qua',
   '3403948573',
-  '2938492923845820',
-  '12/25',
-  933
 );
+// $ospite1->addCrediCard(123456789, '05/23', 123);
 
 var_dump($ospite1);
 
