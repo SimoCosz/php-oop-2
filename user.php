@@ -1,19 +1,12 @@
 <?php
 
-class user{
-  public $nome;
-  public $cognome;
-  public $email;
+require_once __DIR__.'/ospite.php';
+class user extends ospite{
+
   private $password;
-  public $indirizzo;
-  public $telefono;
 
   function __construct($_nome, $_cognome, $_email, $_password, $_indirizzo, $_telefono){
-    $this->nome = $_nome;
-    $this->cognome = $_cognome;
-    $this->email = $_email;
+    parent::__construct($_nome, $_cognome, $_email, $_indirizzo, $_telefono);
     $this->password = $_password;
-    $this->indirizzo = $_indirizzo;
-    $this->telefono = $_telefono;
   }
 }
