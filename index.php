@@ -3,6 +3,7 @@
 require_once __DIR__. '/prodotto.php';
 require_once __DIR__. '/user.php';
 require_once __DIR__. '/ospite.php';
+require_once __DIR__. '/carrello.php';
 
 $prodotto1 = new prodotto(
   'Medicinale',
@@ -25,8 +26,15 @@ $prodotto3 = new prodotto(
   'LoveDi',
   31.50
 );
+$prodotto4 = new prodotto(
+  'Cuccia',
+  'Cuccia Buffa',
+  'Cuccia esagonale morbidissima',
+  'DormiQui',
+  59.99
+);
 
-var_dump($prodotto1, $prodotto2, $prodotto3);
+var_dump($prodotto1, $prodotto2, $prodotto4);
 
 $user1 = new user(
   'Mario',
@@ -48,3 +56,13 @@ $ospite1 = new ospite(
 );
 
 var_dump($ospite1);
+
+$carrello1 = new carrello(
+  [],
+  '',
+  ''
+);
+$carrello1->addProdotti($prodotto1);
+$carrello1->addProdotti($prodotto2);
+
+var_dump($carrello1);

@@ -14,4 +14,8 @@ class ospite{
     $this->indirizzo = $_indirizzo;
     $this->telefono = $_telefono;
   }
+
+  public function getFullName(){
+    "{$this->nome} {$this->cognome}";
+  }
 }
