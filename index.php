@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__. '/prodotto.php';
+require_once __DIR__. '/carrello.php';
+require_once __DIR__. '/user.php';
 
 $prodotto1 = new prodotto(
   'Medicinale',
@@ -25,3 +27,14 @@ $prodotto3 = new prodotto(
 );
 
 var_dump($prodotto1, $prodotto2, $prodotto3);
+
+$user1 = new user(
+  'Mario',
+  'Rossi',
+  'mario.rossi@gmail.com',
+  'mariorossi',
+  'Piazza la Bomba e Scappa',
+  '12345678901'
+);
+
+var_dump($user1);
