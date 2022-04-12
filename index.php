@@ -34,7 +34,7 @@ $prodotto4 = new prodotto(
   59.99
 );
 
-var_dump($prodotto1, $prodotto2, $prodotto4);
+// USER
 
 $user1 = new user(
   'Mario',
@@ -42,7 +42,10 @@ $user1 = new user(
   'mario.rossi@gmail.com',
   'mariorossi',
   'Piazza la Bomba e Scappa',
-  '12345678901'
+  '12345678901',
+  '2938492923845820',
+  '12/25',
+  933
 );
 
 var_dump($user1);
@@ -52,17 +55,23 @@ $ospite1 = new ospite(
   'bianchi',
   'giova.white@gmail.com',
   'Via da Qua',
-  '3403948573'
+  '3403948573',
+  '2938492923845820',
+  '12/25',
+  933
 );
 
 var_dump($ospite1);
 
 $carrello1 = new carrello(
   [],
-  '',
-  ''
+  0,
+  0
 );
 $carrello1->addProdotti($prodotto1);
 $carrello1->addProdotti($prodotto2);
-
+$carrello1->addProdotti($prodotto4);
+$carrello1->addProdotti($prodotto4);
+$carrello1->calcTot();
+$carrello1->countTotProdotti();
 var_dump($carrello1);
