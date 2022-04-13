@@ -63,10 +63,11 @@ $carrello2->countTotProdotti();
 // CREDITCARD
 
 $card1 = new creditCard(
-  1234567890123456,
-  '12-22',
+  1234567890123452,
+  '',
   333
 );
+$card1->setScadenza('01-24');
 $card2 = new creditCard(
   9871231317653421,
   '05-25',
